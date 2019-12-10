@@ -1,0 +1,9 @@
+{% if latest_recipe_list %}
+    <ul>
+    {% for question in  latest_recipe_lists%}
+        <li><a href="{% url 'myrecipe:detail' recipe.id %}">{{ recipe.recipe_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Recipes are available.</p>
+{% endif %}
